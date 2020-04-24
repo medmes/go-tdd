@@ -1,4 +1,5 @@
 # Go TDD 
+[![Build Status](https://travis-ci.com/medmes/go-tdd.svg?branch=master)](https://travis-ci.com/medmes/go-tdd)
 
 <p align="center">
   <img src="red-green-blue-gophers-smaller.png" />
