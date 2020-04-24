@@ -46,4 +46,13 @@ func TestHello(t *testing.T) {
 		//Asserting
 		assertThat(t, got, expected)
 	})
+
+	t.Run("Saying Hello in French", func(t *testing.T) {
+		// Given, When
+		expected := "Bonjour Elodie"
+		got := Hello("Elodie", "French")
+
+		//Asserting
+		assertThat(t, got, expected)
+	})
 }
