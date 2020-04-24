@@ -22,7 +22,7 @@ func TestHello(t *testing.T) {
 	t.Run("saying hello to people!", func(t *testing.T) {
 		// Given, When
 		expected := "Hello Mo!"
-		got := Hello("Mo!")
+		got := Hello("Mo!", "")
 
 		//Asserting
 		assertThat(t, got, expected)
@@ -32,10 +32,18 @@ func TestHello(t *testing.T) {
 	t.Run("saying hello world, when no argument iss passed!", func(t *testing.T) {
 		// Given, When
 		expected := "Hello World!"
-		got := Hello("")
+		got := Hello("", "")
 
 		//Asserting
 		assertThat(t, got, expected)
 	})
 
+	t.Run("Saying Hello in Spanish", func(t *testing.T) {
+		// Given, When
+		expected := "Hola Elodie"
+		got := Hello("Elodie", "Spanish")
+
+		//Asserting
+		assertThat(t, got, expected)
+	})
 }
