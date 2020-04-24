@@ -17,3 +17,4 @@ repository is following the [Learn Go with Tests](https://github.com/quii/learn-
 1. [Install Go](install-go.md) - Set up environment for productivity.
 2. [Hello, world](src/hello) - Declaring variables, constants, if/else statements, switch, write your first go program and write your first test. Sub-test syntax and closures.
 3. [Integers](src/integers) - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
+4. [Iteration](src/iteration) - Learn about for and benchmarking.
