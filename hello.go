@@ -1,6 +1,8 @@
 package hello
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const (
 	englishHelloPrefix string = "Hello "
@@ -11,20 +13,27 @@ const (
 )
 
 func Hello(name string, language string) string {
-	//Default Prefix:
-	prefix := englishHelloPrefix
+
 	if name == "" {
 		name = "World!"
 	}
 
-	switch language {
+	return greetingPrefix(language) + name
+}
+
+func greetingPrefix(prefix string) string {
+
+	switch prefix {
 	case "Spanish":
 		prefix = spanishHelloPrefix
 	case "French":
 		prefix = frenchHelloPrefix
+	//Default Prefix:
+	default:
+		prefix = englishHelloPrefix
 	}
 
-	return prefix + name
+	return prefix
 }
 
 func main() {
