@@ -4,8 +4,8 @@ package arrays_slices
 func Sum(numbers [5]int) int {
 
 	sum := 0
-	for i := 0; i < 5; i++ {
-		sum += numbers[i]
+	for _, v := range numbers { // (k, v) -> key (array index), value (array value).
+		sum += v
 	}
 	return sum
 }
