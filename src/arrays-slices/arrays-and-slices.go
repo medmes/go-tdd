@@ -9,3 +9,12 @@ func Sum(numbers [5]int) int {
 	}
 	return sum
 }
+
+func SumSlice(numbers []int) int {
+
+	sum := 0
+	for _, v := range numbers { // (k, v) -> key (array index), value (array value).
+		sum += v
+	}
+	return sum
+}
