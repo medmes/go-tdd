@@ -20,3 +20,4 @@ repository is following the [Learn Go with Tests](https://github.com/quii/learn-
 3. [Integers](src/integers) - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
 4. [Iteration](src/iteration) - Learn about for and benchmarking.
 5. [Arrays and slices](src/arrays-slices) - Learn about arrays, slices, len, varargs, range and test coverage.
+6. [Structs, methods & interfaces](src/struct-interface) - Learn about struct, methods, interface and table driven tests.
