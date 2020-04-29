@@ -1,6 +1,8 @@
 package struct_interface
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestPerimeter(t *testing.T) {
 
@@ -38,5 +40,26 @@ func TestArea(t *testing.T) {
 
 		//Asserting
 		assertThatArea(t, circle, want)
+	})
+
+	// Introducing table driven tests in Go
+	// https://github.com/golang/go/wiki/TableDrivenTests
+	t.Run("testing shape area with table driven tests", func(t *testing.T) {
+		// declaring a struct and instancing it inline
+		areaTests := []struct {
+			shape Shape   //
+			want  float64 // expecting
+		}{
+			{Rectangle{12, 6}, 72.0},
+			{Circle{10}, 314.1592653589793},
+			{Triangle{12.0, 6.0}, 36.0},
+		}
+
+		for _, tt := range areaTests {
+			got := tt.shape.Area()
+			if got != tt.want {
+				t.Errorf("got %g want %g", got, tt.want)
+			}
+		}
 	})
 }
