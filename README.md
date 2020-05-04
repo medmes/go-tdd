@@ -21,3 +21,4 @@ repository is following the [Learn Go with Tests](https://github.com/quii/learn-
 4. [Iteration](src/iteration) - Learn about for and benchmarking.
 5. [Arrays and slices](src/arrays-slices) - Learn about arrays, slices, len, varargs, range and test coverage.
 6. [Structs, methods & interfaces](src/struct-interface) - Learn about struct, methods, interface and table driven tests.
+7. [Pointers & errors](src/pointers-errors) - Learn about pointers and errors.
