@@ -1,6 +1,9 @@
 package pointers_errors
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type Bitcoin int
 
@@ -21,8 +24,12 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.balance // Normally it should be (*w).balance but makers of Go made without explicit dereference
 }
 
-func (w *Wallet) Withdraw(amount Bitcoin) {
+func (w *Wallet) Withdraw(amount Bitcoin) error {
+	if w.balance < amount {
+		return errors.New("you cannot withdraw, because of insufficient balance")
+	}
 	w.balance -= amount
+	return nil
 }
 
 func (b Bitcoin) String() string {
