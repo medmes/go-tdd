@@ -1,6 +1,9 @@
 package pointers_errors
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestWallet(t *testing.T) {
 	//Given
@@ -11,6 +14,7 @@ func TestWallet(t *testing.T) {
 	got := wallet.Balance()
 	want := 10
 
+	fmt.Printf("address of balance in test is %v \n", &wallet.balance)
 	//Asserting
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
