@@ -1,8 +1,10 @@
 package maps
 
-import "testing"
+import (
+	"testing"
+)
 
-func TestSearch(t *testing.T) {
+func TestDictionary_Search(t *testing.T) {
 	//Given
 	dictionary := Dictionary{"test": "this is just a test"}
 
@@ -20,8 +22,15 @@ func TestSearch(t *testing.T) {
 		_, err := dictionary.Search("xxxx")
 
 		//Asserting
-		assertError(t, err, notFoundError)
+		assertError(t, err, NotFoundError)
 	})
+}
+
+func TestDictionary_Add(t *testing.T) {
+
+	dictionary := Dictionary{}
+	dictionary.Add("test", "this is just a test")
+	assertStrings(t, dictionary["test"], "this is just a test")
 }
 
 // assert Helper
