@@ -23,3 +23,4 @@ repository is following the [Learn Go with Tests](https://github.com/quii/learn-
 6. [Structs, methods & interfaces](src/struct-interface) - Learn about struct, methods, interface and table driven tests.
 7. [Pointers & errors](src/pointers-errors) - Learn about pointers and errors.
 8. [Maps](src/maps) -  Learn about storing values in the map data structure.
+9. [Dependency Injection](src/di) - Learn about dependency injection, how it relates to using interfaces and a primer on io.
