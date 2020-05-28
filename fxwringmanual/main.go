@@ -24,7 +24,7 @@ func main() {
 	slogger := logger.Sugar()
 
 	conf := &Config{}
-	data, err := ioutil.ReadFile("fx/config/base.yaml")
+	data, err := ioutil.ReadFile("fxwringmanual/config/base.yaml")
 	if err != nil {
 		slogger.Errorf("Could not find or read from config/base.yaml file")
 	}
@@ -36,8 +36,8 @@ func main() {
 
 	mux := http.NewServeMux()
 	httphandler.New(mux)
-
 	slogger.Info("HTTP Listening on port: ", conf.Address)
+
 	//  http.ListenAndServe, Listening on config.Address port:
 	if err = http.ListenAndServe(conf.Address, mux); err != nil {
 		slogger.Info("Something went wrong")
