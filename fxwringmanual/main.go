@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/medmes/go-tdd/fx/httphandler"
+	"github.com/medmes/go-tdd/fxwringmanual/httphandler"
 	"go.uber.org/zap"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
