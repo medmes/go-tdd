@@ -27,14 +27,6 @@ func (s *SpySleeper) Sleep() {
 	s.Calls++
 }
 
-//DefaultSleeper
-type DefaultSleeper struct {
-}
-
-func (d *DefaultSleeper) Sleep() {
-	time.Sleep(1 * time.Second)
-}
-
 //CountdownOperationsSpy
 type CountdownOperationsSpy struct {
 	Calls []string
