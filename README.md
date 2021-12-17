@@ -25,3 +25,4 @@ repository is following the [Learn Go with Tests](https://github.com/quii/learn-
 8. [Maps](maps) -  Learn about storing values in the map data structure.
 9. [Dependency Injection](di) - Learn about dependency injection, how it relates to using interfaces and a primer on io.
 10. [Mocking](mocking) - Take some existing untested code and use DI with mocking to test it.
+11. [Concurrency](concurrency) - Learn how to write concurrent code to make your software faster.
